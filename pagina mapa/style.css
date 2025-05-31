@@ -1,0 +1,28 @@
+body {
+    background: #7b68ee;
+    display: flex;
+    place-content: left left;
+
+}
+
+.container{
+    width: 50%;
+}
+.container path{
+    fill: #f9b452;
+    stroke: #8b4513;
+    stroke-width: 2px;
+}
+
+.container :hover{
+    fill: #800000;
+
+}
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #333;
+  max-width: 300px;
+}
