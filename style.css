@@ -5,14 +5,14 @@
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'arial';
       background: #f0f0f0;
     }
 
     nav {
-      background-color: #333;
+      background-color: #DAF7A6;
       padding: 1rem 2rem;
-      position: sticky;
+      position: sticky; 
       top: 0;
       z-index: 1000;
     }
@@ -32,7 +32,7 @@
 
     ul.menu li a {
       text-decoration: none;
-      color: white;
+      color: black;
       padding: 0.5rem 1rem;
       display: block;
       transition: background 0.3s, color 0.3s;
@@ -49,7 +49,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background-color: #444;
+      background-color: #DAF7A6;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -66,7 +66,7 @@
     }
 
     ul.submenu li a:hover {
-      background-color: #666;
+      background-color: green;
     }
 
     section {
