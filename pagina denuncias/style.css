@@ -1,52 +1,86 @@
-    body {
-      background-color: #f0f2f5;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefcf6;
+  margin: 0;
+  padding: 20px;
+  color: #333333;
+}
 
-    form {
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-    }
+form {
+  max-width: 700px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border-left: 8px solid #5b9aa0;
+}
 
-    form label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #333;
-    }
+h1, h2 {
+  color: #5b9aa0;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 4px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #3e5f3f;
+}
 
-    form button {
-      width: 100%;
-      padding: 10px;
-      background-color: #7b68ee;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fefcf6;
+  transition: border-color 0.3s, background-color 0.3s;
+}
 
-    form button:hover {
-      background-color: #5f50cc;
-    }
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #5b9aa0;
+  background-color: #fff;
+  outline: none;
+}
+
+button {
+  background-color: #3e5f3f;
+  color: #ffffff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #a0603e;
+}
+
+.checkbox-group {
+  margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+small, .hint {
+  font-size: 13px;
+  color: #666;
+  display: block;
+  margin-top: 3px;
+  margin-bottom: 18px;
+}
