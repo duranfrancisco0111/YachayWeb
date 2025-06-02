@@ -2,67 +2,67 @@
         const datosRegiones = {
             CLRM: {
                 titulo: "RM Región Metropolitana",
-                descripcion: "Capital: Santiago. Población: 7 millones."
+                descripcion: "Informacion faltante"
             },
             CLAP: {
                 titulo: "XV Region de Arica y Parinacota",
-                descripcion: "Región más al norte de Chile. Rica en cultura Aymara."
+                descripcion: "Informacion faltante"
             },
             CLTA: {
                 titulo: "I Region de Tarapacá",
-                descripcion: "Capital: Iquique. Famosa por la ZOFRI."
+                descripcion: "Informacion faltante."
             },
             CLAN: {
                 titulo: "II Region de Antofagasta",
-                descripcion: "Zona minera por excelencia. Desierto de Atacama."
+                descripcion: "Informacion faltante"
             },
             CLAT:{
                 titulo: "III Region de Atacama",
-                descripcion: "Puro desierto loco"
+                descripcion: "Informacion faltante"
             },
             CLCO: {
                 titulo: "IV Region de Coquimbo",
-                descripcion: "Región costera con La Serena como capital."
+                descripcion: "Informacion faltante"
             },
             CLVS: {
                 titulo: "V Region de Valparaiso",
-                descripcion: "antiguo congreso"
+                descripcion: "Informacion faltante"
             },
             CLLI: {
                 titulo: "XI Region Libertador General Bernardo O'Higgins",
-                descripcion: "rancagua"
+                descripcion: "Informacion faltante"
             },
             CLML: {
                 titulo: "VII Region del Maule",
-                descripcion: "tanto tanto"
+                descripcion: "Informacion faltante"
             },
             CLNB: {
                 titulo: "XVI Region del Ñuble",
-                descripcion: "Tanto tanto"
+                descripcion: "Informacion faltante"
             },
             CLAR: {
                 titulo: "IX Region de la Araucania",
-                descripcion: "quema de camiones"
+                descripcion: "Informacion faltante"
             },
             CLBI: {
                 titulo: "XIII Region del BIO BIO",
-                descripcion: "persa biobio"
+                descripcion: "Informacion faltante"
             },
             CLLR: {
                 titulo: "XIVRegion de los Rios",
-                descripcion: "Muerte piñera"
+                descripcion: "Informacion faltante"
             },
             CLLL: {
                 titulo: "X Region de los Lagos",
-                descripcion: "nada"
+                descripcion: "Informacion faltante"
             },
             CLAI: {
                 titulo: "XI Region Aisén del General Carlos Ibáñez del Campo",
-                descripcion: "a la cresta del mundo"
+                descripcion: "Informacion faltante"
             },
             CLMA: {
                 titulo: "XII Region Magallanes y Antártica Chilena",
-                descripcion: "ma helao que la chucha"
+                descripcion: "Informacion faltante"
             },
 
 
