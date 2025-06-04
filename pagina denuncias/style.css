@@ -1,32 +1,46 @@
+/* Color Palette Variables (Chilean Indigenous Inspiration) */
+:root {
+    --primary-color: #A36A00;   /* Deep Ochre/Gold - warmth, ancestral knowledge, earth */
+    --secondary-color: #0A4B6B; /* Deep Indigo/Teal Blue - sky, water, wisdom, depth */
+    --accent-color: #28a745;     /* Vibrant Green - life, biodiversity, growth, renewal */
+
+    /* Neutral colors for readability and balance in forms */
+    --form-background: #F8F4ED; /* Very light earthy beige for general backgrounds */
+    --card-background: #FFFFFF;  /* Crisp white for content cards/form itself */
+    --text-color-dark: #383838;  /* Dark charcoal for main text */
+    --text-color-medium: #6a6a6a; /* Medium grey for secondary text/hints */
+    --border-color-light: #D3CDC4; /* Soft grey-beige for subtle borders */
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fefcf6;
-  margin: 0;
-  padding: 20px;
-  color: #333333;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--form-background); /* Using the earthy beige background */
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color-dark); /* Main text in dark charcoal */
 }
 
 form {
-  max-width: 700px;
-  margin: auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  border-left: 8px solid #5b9aa0;
+    max-width: 700px;
+    margin: auto;
+    background-color: var(--card-background); /* Form background in crisp white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid var(--primary-color); /* Left border in Deep Ochre/Gold */
 }
 
 h1, h2 {
-  color: #5b9aa0;
-  margin-bottom: 20px;
-  text-align: center;
+    color: var(--secondary-color); /* Headings in Deep Indigo/Teal Blue */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #3e5f3f;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color-dark); /* Labels in dark charcoal */
 }
 
 input[type="text"],
@@ -35,52 +49,53 @@ input[type="date"],
 input[type="time"],
 select,
 textarea {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 18px;
-  border: 1px solid #cfcfcf;
-  border-radius: 8px;
-  font-size: 14px;
-  background-color: #fefcf6;
-  transition: border-color 0.3s, background-color 0.3s;
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-color-light); /* Borders in soft grey-beige */
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--form-background); /* Input background in earthy beige */
+    transition: border-color 0.3s, background-color 0.3s;
+    color: var(--text-color-dark); /* Input text in dark charcoal */
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #5b9aa0;
-  background-color: #fff;
-  outline: none;
+    border-color: var(--primary-color); /* Focus border in Deep Ochre/Gold */
+    background-color: var(--card-background); /* Focus background in crisp white */
+    outline: none;
 }
 
 button {
-  background-color: #3e5f3f;
-  color: #ffffff;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
+    background-color: var(--accent-color); /* Button background in Vibrant Green */
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
-  background-color: #a0603e;
+    background-color: var(--primary-color); /* Button hover to Deep Ochre/Gold */
 }
 
 .checkbox-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 input[type="checkbox"] {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
 small, .hint {
-  font-size: 13px;
-  color: #666;
-  display: block;
-  margin-top: 3px;
-  margin-bottom: 18px;
+    font-size: 13px;
+    color: var(--text-color-medium); /* Hints in medium grey */
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 18px;
 }

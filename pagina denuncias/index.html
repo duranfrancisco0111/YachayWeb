@@ -55,21 +55,26 @@
     <!-- Sección 2: Ubicación -->
     <h2>Ubicación del Incidente</h2>
 
-    <label>Región del incidente:
-    <select name="region" id="region" required>
-    <option value="">Seleccione una región</option>
-    </select>
-    </label>
+    <div class="form-group">
+      <label for="region">Región del incidente:</label>
+      <select name="region" id="region" required>
+        <option value="">Seleccione una región</option>
+      </select>
+    </div>
 
-    <label>Comuna del incidente:
-    <select name="comuna" id="comuna" required>
-    <option value="">Seleccione una comuna</option>
-    </select>
-    </label>
+    <div class="form-group">
+      <label for="comuna">Comuna del incidente:</label>
+      <select name="comuna" id="comuna" required>
+        <option value="">Seleccione una comuna</option>
+      </select>
+    </div>
 
-    <label>Dirección o referencia del lugar específico:
-      <input type="text" name="direccion" placeholder="Ej: Ruta 5 Norte Km 100, sector Ralco">
-    </label>
+    <div class="form-group">
+      <label for="direccion">Dirección o referencia del lugar específico:</label>
+      <input type="text" name="direccion" id="direccion" placeholder="Ej: Ruta 5 Norte Km 100, sector Ralco">
+    </div>
+
+    
     <!-- Sección 3: Información del Denunciante -->
     <h2>Información del Denunciante (opcional)</h2>
 
@@ -92,10 +97,8 @@
         <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,9}" maxlength="9" placeholder="912345678" inputmode="numeric">
       </div>
       <small>Ingrese solo los números después del +56. Ej: 912345678. No incluya espacios ni guiones.</small>
-
-
+      
     </div>
-
     <!-- Sección 4: Declaración y Envío -->
     <h2>Declaración y Envío</h2>
 
@@ -111,15 +114,14 @@
 
     <button type="submit">Enviar Denuncia</button>
   </form>
+
   <script>
     function toggleDenunciante() {
       const check = document.getElementById('anonimo').checked;
-      document.getElementById('denunciante-info').style.display = check ? 'none' : 'block';
-    }
+      document.getElementById('denunciante-info').style.display = check ? 'none' : 'block';}
   </script>
-  <script src="regiones.js"></script> <!-- Aquí iría la lógica para cargar regiones y comunas -->
-  <!--<script src="mapa.js"></script>  Aquí irá la lógica de Leaflet o el mapa que elijas -->
-
+  <script src="regiones.js"></script> 
+  
 
 </body>
 </html>
