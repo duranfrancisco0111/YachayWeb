@@ -1,13 +1,29 @@
- 
-    html {
-      scroll-behavior: smooth;
-    }
+/* Basic Resets & Global Styles */
+:root {
+    /* Primary brand colors inspired by Chilean indigenous artistry and nature */
+    --primary-color: #A36A00; /* Deep Ochre/Gold - warmth, ancestral knowledge, earth */
+    --secondary-color: #0A4B6B; /* Deep Indigo/Teal Blue - sky, water, wisdom, depth */
+    --accent-color: #28a745;   /* Vibrant Green - life, biodiversity, growth, renewal */
+
+    /* Neutral colors for readability and balance */
+    --text-color: #383838;       /* Dark charcoal for body text */
+    --light-text-color: #6a6a6a; /* Medium grey for secondary text */
+    --background-color: #F8F4ED; /* Very light earthy beige for general backgrounds */
+    --card-background: #FFFFFF;  /* Crisp white for content cards */
+    --border-color: #D3CDC4;     /* Soft grey-beige for subtle borders */
+    --hero-overlay-color: rgba(10, 75, 107, 0.7); /* Deeper blue overlay for hero */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
     body {
       margin: 0;
       font-family: 'arial';
       background: #f0f0f0;
-      
     }
 
     nav {
@@ -18,64 +34,295 @@
       z-index: 1000;
     }
 
-    ul.menu {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      justify-content: center;
-    }
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    ul.menu li {
-      margin: 0 1rem;
-      position: relative;
-    }
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color); /* Logo in deep ochre */
+}
 
-    ul.menu li a {
-      text-decoration: none;
-      color: black;
-      padding: 0.5rem 1rem;
-      display: block;
-      transition: background 0.3s, color 0.3s;
-    }
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
 
-    ul.menu li a:hover {
-      background-color: #555;
-      border-radius: 5px;
-      color: #fff;
-    }
+.main-nav ul li {
+    margin-left: 30px;
+}
 
-    ul.menu li ul.submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #DAF7A6;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      min-width: 150px;
-      border-radius: 5px;
-    }
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
 
-    ul.menu li:hover ul.submenu {
-      display: block;
-    }
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
 
-    ul.submenu li a {
-      padding: 0.5rem 1rem;
-    }
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
 
-    ul.submenu li a:hover {
-      background-color: green;
-    }
+/* Buttons */
+.button-action {
+    display: inline-block;
+    background-color: var(--primary-color); /* Main buttons in ochre */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
 
-    section {
-      padding: 80px 20px;
-      border-bottom: 1px solid #ccc;
-      background: #fff;
-    }
+.button-action:hover {
+    background-color: #8C5900; /* Darker ochre */
+    transform: translateY(-2px);
+    color: #fff; /* Keep text white on hover */
+}
 
-    h1 {
-      margin-top: 0;
+.button-action.high-visibility {
+    background-color: var(--accent-color); /* High-visibility buttons in vibrant green */
+}
+
+.button-action.high-visibility:hover {
+    background-color: #218838; /* Darker green */
+}
+
+
+/* Hero Section */
+.hero-section {
+    /* Consider a background image that subtly hints at Chilean landscapes or patterns */
+    background: url('https://via.placeholder.com/1920x600/0A4B6B/F8F4ED?text=YachayWeb+Conocimiento+Ancestral') no-repeat center center/cover; /* Placeholder in deep blue */
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--hero-overlay-color); /* Deeper blue overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.8em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+.hero-button {
+    padding: 15px 35px;
+    font-size: 1.1em;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--border-color); /* Added a subtle border */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.service-card .icon-wrapper {
+    font-size: 3.5em;
+    color: var(--secondary-color); /* Icons in deep blue */
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: var(--light-text-color);
+    flex-grow: 1;
+}
+
+.service-card .button-action {
+    margin-top: 20px;
+    width: auto;
+    align-self: center;
+}
+
+.service-card .small-text {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-top: 10px;
+}
+
+.service-card.special-card {
+    border: 2px solid var(--accent-color); /* Emphasis border in green */
+    background-color: #E7F6ED; /* Very light green background for emphasis */
+}
+
+.service-card.special-card .icon-wrapper {
+    color: var(--accent-color); /* Icon in green for emphasis */
+}
+
+.service-card .security-info {
+    font-style: italic;
+    font-size: 0.95em;
+    color: var(--text-color); /* Changed from generic grey */
+    margin-bottom: 15px;
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--secondary-color); /* Footer in deep blue */
+    color: #f1f1f1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main-footer p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    margin: 0 15px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Footer links hover to ochre */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3em;
     }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 0 15px 10px;
+    }
+    .hero-section {
+        padding: 80px 0;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    .service-card {
+        padding: 25px;
+    }
+    .service-card .icon-wrapper {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    .main-nav ul li {
+        margin: 0 10px 10px;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .service-card {
+        padding: 20px;
+    }
+    .service-card .icon-wrapper {
+        font-size: 2.5em;
+    }
+}

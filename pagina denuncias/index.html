@@ -4,36 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Formulario de Denuncias</title>
+  <title>Formulario de Denuncias - YachayWeb</title>
  
 </head>
 <body>
 
-  <form action="https://formspree.io/f/xpwrabwl" method="POST">
+  <form action="https://formspree.io/f/xpwrabwl" method="POST" enctype="multipart/form-data">
     <label>
-      Tu correo electrónico:
-      <input type="email" name="email" required>
+      <h1> Formulario de Denuncias</h1>
+
+
+      <!--Sección1: Detalles del incidente-->
+      <h2>Detalles del incidente</h2>
+
+    <label>Título del Incidente: <input type="text" name="Título Denuncia" placeholder="EJ: Uso indebido de conocimiento ancestral en Arica" required> 
+    </label> 
+
+    <label>Tipo de incidente/denuncia: <select name="tipó_incidente"required>
+      <option disabled selected>Seleccione una opción</option>
+      <option>Apropiación/Uso Indebido de Recursos Genéticos</option>
+      <option>Apropiación/Uso Indebido de Conocimientos Ancestrales</option>
+      <option>Daño Ambiental a la Biodiversidad</option>
+      <option>Incumplimiento de CPLI</option>
+      <option>Actividad Comercial Ilegal Relacionada con Biodiversidad</option>
+      <option>Violación de Derechos de Pueblos Originarios</option>
+      <option>Otro</option>
+    </selec>
+    </label>
+
+    <label>Especifique si eligió "Otro":<input type="text" name="tipo_otro" placeholder="Descripción del tipó de incidente">
+    </label>
+
+    <label>Fecha de incidente:<input type="date" name="fecha_incidente">
+    </label>
+    
+    <label>Hora aproximada del incidente:<input type="time" name="hora_incidente">
+    </label>
+
+    <label>Descripcion detallada del incidente:<textarea name="descripcion" rows="6" placeholder="Describa lo sucedido  con el mayor detalle posible..."></textarea>
+    </label>
+
+    <label>Partes involucradas (si las conoce)<textarea name="involucrados" rows="3" placeholder="Ej:Empresa X, Comunidad Y, Persona Z "></textarea>
+    </label>
+
+    <label for="evidencia">Adjuntar evidencia (opcional):</label>
+    <input type="file" name="evidencia" id="evidencia" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.mp4" multiple>
+    <small class="hint">Formatos permitidos: jpg, png, pdf, doc, mp4. Tamaño máximo recomendado: 10MB.</small>
+        
+
+    <!-- Sección 2: Ubicación -->
+    <h2>Ubicación del Incidente</h2>
+
+    <div class="form-group">
+      <label for="region">Región del incidente:</label>
+      <select name="region" id="region" required>
+        <option value="">Seleccione una región</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="comuna">Comuna del incidente:</label>
+      <select name="comuna" id="comuna" required>
+        <option value="">Seleccione una comuna</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección o referencia del lugar específico:</label>
+      <input type="text" name="direccion" id="direccion" placeholder="Ej: Ruta 5 Norte Km 100, sector Ralco">
+    </div>
+
+    
+    <!-- Sección 3: Información del Denunciante -->
+    <h2>Información del Denunciante (opcional)</h2>
+
+    <label>
+      <input type="checkbox" id="anonimo" onchange="toggleDenunciante()"> Deseo que mi denuncia sea anónima
+    </label>
+
+    <div id="denunciante-info">
+      <label>Nombre completo:
+        <input type="text" name="nombre">
+      </label>
+
+      <label>Correo electrónico:
+        <input type="email" name="correo">
+      </label>
+
+      <label for="telefono">Teléfono de contacto:</label>
+      <div class="telefono-wrapper">
+        <span class="codigo-pais">+56</span>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,9}" maxlength="9" placeholder="912345678" inputmode="numeric">
+      </div>
+      <small>Ingrese solo los números después del +56. Ej: 912345678. No incluya espacios ni guiones.</small>
+      
+    </div>
+    <!-- Sección 4: Declaración y Envío -->
+    <h2>Declaración y Envío</h2>
+
+    <label>
+      <input type="checkbox" name="veracidad" required>
+      Declaro que la información proporcionada es verídica y de mi conocimiento.
     </label>
 
     <label>
-      Nombre Completo
-      <textarea name="message" rows="1" required></textarea>
-    </label>
-    <label>
-      Numero de contacto:
-      <textarea name="message" rows="1" required></textarea>
-    </label>
-    <label>
-      Direccion (Region - Ciudad - pueblo - Nombre Calle + Numero casa):
-      <textarea name="message" rows="2" required></textarea>
-    </label>
-    <label>
-      Detalles de la Denuncia:
+      Tu mensaje:
       <textarea name="message" rows="5" required></textarea>
     </label>
 
-    <button type="submit">Enviar</button>
+    <button type="submit">Enviar Denuncia</button>
   </form>
+
+  <script>
+    function toggleDenunciante() {
+      const check = document.getElementById('anonimo').checked;
+      document.getElementById('denunciante-info').style.display = check ? 'none' : 'block';}
+  </script>
+  <script src="regiones.js"></script> 
+  
 
 </body>
 </html>
