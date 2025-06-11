@@ -1,4 +1,3 @@
-
         const datosRegiones = {
             CLRM: {
                 titulo: "RM Región Metropolitana",
@@ -10,7 +9,8 @@
             },
             CLTA: {
                 titulo: "I Region de Tarapacá",
-                descripcion: "Informacion faltante."
+                descripcion: "•Flora: Tamarungo, algarrobo, tola, rica-rica  •Fauna: vicuña, alpaca, flamenco andino  •Agrícola: papas altiplánicas, quinua.",
+                imagen: "imagenes/papa_antiplanica.png"
             },
             CLAN: {
                 titulo: "II Region de Antofagasta",
@@ -29,7 +29,7 @@
                 descripcion: "Informacion faltante"
             },
             CLLI: {
-                titulo: "XI Region Libertador General Bernardo O'Higgins",
+                titulo: "VI Region Libertador General Bernardo O'Higgins",
                 descripcion: "Informacion faltante"
             },
             CLML: {
@@ -41,15 +41,15 @@
                 descripcion: "Informacion faltante"
             },
             CLAR: {
-                titulo: "IX Region de la Araucania",
+                titulo: "VIII Region de la Araucania",
                 descripcion: "Informacion faltante"
             },
             CLBI: {
-                titulo: "XIII Region del BIO BIO",
+                titulo: "VIII Region del BIO BIO",
                 descripcion: "Informacion faltante"
             },
             CLLR: {
-                titulo: "XIVRegion de los Rios",
+                titulo: "XIV Region de los Rios",
                 descripcion: "Informacion faltante"
             },
             CLLL: {
@@ -63,11 +63,7 @@
             CLMA: {
                 titulo: "XII Region Magallanes y Antártica Chilena",
                 descripcion: "Informacion faltante"
-            },
-
-
-
-            // Agrega más según los IDs
+            }
         };
 
         // Detecta los clics en cada path del SVG
@@ -79,6 +75,16 @@
             if (datos) {
                 document.getElementById("titulo-region").textContent = datos.titulo;
                 document.getElementById("descripcion-region").textContent = datos.descripcion;
+                
+                // Mostrar u ocultar la imagen según corresponda
+                const imagenRegion = document.getElementById("imagen-region");
+                if (datos.imagen) {
+                    imagenRegion.src = datos.imagen;
+                    imagenRegion.style.display = "block";
+                } else {
+                    imagenRegion.style.display = "none";
+                }
+                
                 document.getElementById("info-region").style.display = "block";
             }
             });

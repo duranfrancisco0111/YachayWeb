@@ -1,5 +1,5 @@
 body {
-    background: #DAF7A6;
+    background: #F4EBD9;
     display: flex;
     place-content: left left;
 
@@ -9,13 +9,13 @@ body {
     width: 50%;
 }
 .container path{
-    fill: #f9b452;
-    stroke: #8b4513;
+    fill: #DAF7A6;
+    stroke: green;
     stroke-width: 2px;
 }
 
 .container :hover{
-    fill: #800000;
+    fill: green ;
 
 }
 .info-box {
@@ -26,3 +26,62 @@ body {
   box-shadow: 0 0 10px #333;
   max-width: 300px;
 }
+#imagen-region{
+    max-width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-top: 15px;
+    border-radius: 4px;
+    display: block;
+}
+ul.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  ul.menu li {
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  ul.menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  ul.menu li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #DAF7A6;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    border-radius: 5px;
+  }
+
+  ul.menu li:hover ul.submenu {
+    display: block;
+  }
+
+  ul.submenu li a {
+    padding: 0.5rem 1rem;
+  }
+
+  ul.submenu li a:hover {
+    background-color: green;
+  }
