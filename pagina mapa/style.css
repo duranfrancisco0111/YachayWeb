@@ -34,6 +34,10 @@ body {
     border-radius: 4px;
     display: block;
 }
+
+
+
+
 ul.menu {
     list-style: none;
     display: flex;
@@ -56,7 +60,7 @@ ul.menu {
   }
 
   ul.menu li a:hover {
-    background-color: #555;
+    background-color: green;
     border-radius: 5px;
     color: #fff;
   }

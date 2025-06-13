@@ -23,6 +23,7 @@ html {
       margin: 0;
       padding: 0;
       justify-content: center;
+      
     }
 
     ul.menu li {
@@ -39,7 +40,7 @@ html {
     }
 
     ul.menu li a:hover {
-      background-color: #555;
+      background-color: green;
       border-radius: 5px;
       color: #fff;
     }

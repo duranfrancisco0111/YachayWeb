@@ -99,6 +99,18 @@ small, .hint {
     margin-top: 3px;
     margin-bottom: 18px;
 }
+nav {
+      background-color: #DAF7A6;
+      padding: 1rem 0.1rem;
+
+      max-height: 60px;
+
+      top: 0;
+
+      max-width: 750px;     /* ❗️esto limita el ancho total */
+      margin: 0 auto; 
+      border-radius: 10px;      
+  }
 ul.menu {
     list-style: none;
     display: flex;
@@ -121,7 +133,7 @@ ul.menu {
   }
 
   ul.menu li a:hover {
-    background-color: #555;
+    background-color: green;
     border-radius: 5px;
     color: #fff;
   }

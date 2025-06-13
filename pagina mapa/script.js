@@ -1,4 +1,4 @@
-        const datosRegiones = {
+ const datosRegiones = {
             CLRM: {
                 titulo: "RM Región Metropolitana",
                 descripcion: "Informacion faltante"
