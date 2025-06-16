@@ -82,7 +82,7 @@
     }
 
     ul.menu li a:hover {
-      background-color: #555;
+      background-color: green;
       border-radius: 5px;
       color: #fff;
     }
