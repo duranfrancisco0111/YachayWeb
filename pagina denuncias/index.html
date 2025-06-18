@@ -8,6 +8,20 @@
  
 </head>
 <body>
+  <nav>
+    <ul class="menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a>
+        <ul class="submenu">
+          <li><a href="#consultoria">Consultoría</a></li>
+          <li><a href="../pagina mapa/index.html">Mapa de recursos geneticos</a></li>
+          <li> <a href="../pagina guias/index.html">Guia practicas</a></li>
+        </ul>
+      </li>
+
+
+    </ul>
+  </nav>
 
   <form action="https://formspree.io/f/xpwrabwl" method="POST" enctype="multipart/form-data">
     <label>
@@ -108,8 +122,8 @@
     </label>
 
     <label>
-      <input type="checkbox" name="privacidad" required>
-      He leído y acepto la <a href="politica.html" target="_blank">Política de Privacidad</a> y los Términos de Uso.
+      Tu mensaje:
+      <textarea name="message" rows="5" required></textarea>
     </label>
 
     <button type="submit">Enviar Denuncia</button>

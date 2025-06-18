@@ -99,3 +99,66 @@ small, .hint {
     margin-top: 3px;
     margin-bottom: 18px;
 }
+nav {
+      background-color: #8A6240;
+      padding: 1rem 0.1rem;
+
+      max-height: 60px;
+
+      top: 0;
+
+      max-width: 750px;     /* ❗️esto limita el ancho total */
+      margin: 0 auto; 
+      border-radius: 10px;      
+  }
+ul.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  ul.menu li {
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  ul.menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  ul.menu li a:hover {
+    background-color: #4D2D18;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  ul.menu li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8A6240;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    border-radius: 5px;
+  }
+
+  ul.menu li:hover ul.submenu {
+    display: block;
+  }
+
+  ul.submenu li a {
+    padding: 0.5rem 1rem;
+  }
+
+  ul.submenu li a:hover {
+    background-color: #4D2D18;
+  }

@@ -1,95 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YachayWeb - Plataforma Educativa</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+   
+
+  <title>YachayWeb</title>
+ 
+  </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <nav class="main-nav">
-                <a href="#" class="logo">YachayWeb</a>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    </ul>
-                    <a href="registro/cuenta.php" class="login-button">Iniciar sesión</a>
-            </nav>
-        </div>
-    </header>
+  <nav>
+    <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a>
+        <ul class="submenu">
+          <li><a href="#consultoria">Consultoría</a></li>
+          <li><a href="#mapa">Mapa de recursos geneticos</a></li>
+          <li><a href="#denuncias">Enviar denuncias</a></li>
+          <li><a href="#guia">Guias practicas</a></li>
+        </ul>
+      </li>
+      <li><a href="#nosotros">Nosotros</a></li>
 
-    <main>
-        <section id="inicio" class="hero-section">
-            <div class="hero-content container">
-                <h1>Bienvenidos a YachayWeb</h1>
-                <p>
-                    YachayWeb es una plataforma educativa e interactiva que protege y promueve los conocimientos ancestrales sobre recursos genéticos. Con enfoque inclusivo y legal, la herramienta busca orientar a estudiantes, comunidades, investigadores y funcionarios en el acceso justo y respetuoso a estos recursos, fomentando el cumplimiento de tratados internacionales como el Protocolo de Nagoya.
-                </p>
-                <a href="#servicios" class="button-action hero-button">Explora Nuestros Servicios</a>
-            </div>
-        </section>
+    </ul>
+  </nav>
 
-        <section id="servicios" class="services-section container">
-            <h2>Nuestros Servicios Clave</h2>
+  <section id="inicio">
+    <h1>INICIO</h1>
+    <p>Bienvenido a nuestra página.</p>
 
-            <div class="services-grid">
-                <div class="service-card" id="material-educativo">
-                    <div class="icon-wrapper"><i class="fas fa-book-open"></i></div>
-                    <h3>Material Educativo</h3>
-                    <p>Incluye fichas informativas sobre tratados, leyes y derechos de los pueblos originarios, además de estudios de caso, entrevistas a expertos y enlaces confiables para profundizar.</p>
-                </div>
+  </section>
 
-                <div class="service-card" id="mapa-biodiversidad">
-                    <div class="icon-wrapper"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3>Explora Nuestro Mapa de Biodiversidad</h3>
-                    <p>Sumérgete en la rica diversidad biológica de los territorios indígenas. Nuestro **mapa interactivo** te permite visualizar la distribución de recursos genéticos y su conexión con las comunidades originarias.</p>
-                    <p class="small-text">Una herramienta esencial para investigadores, estudiantes y cualquier persona interesada en la conservación y el conocimiento ancestral.</p>
-                    <a href="pagina mapa/index.html" class="button-action">VER MAPA INTERACTIVO</a>
-                </div>
+  <section id="servicios">
+    <h1>SERVICIOS</h1>
+    <p>Explora lo que ofrecemos.</p>
+  </section>
 
-                <div class="service-card" id="cronologias">
-                    <div class="icon-wrapper"><i class="fas fa-history"></i></div>
-                    <h3>Cronologías Interactivas</h3>
-                    <p>Explora hitos clave como el Protocolo de Nagoya, normativas nacionales y casos emblemáticos de biopiratería y distribución justa de beneficios.</p>
-                </div>
+  <section id="consultoria">
+    <h1>CONSULTORIA</h1>
+    <p>Te ayudamos a tomar buenas decisiones.</p>
+  </section>
 
-                <div class="service-card" id="noticias">
-                    <div class="icon-wrapper"><i class="fas fa-newspaper"></i></div>
-                    <h3>Noticias y Análisis</h3>
-                    <p>Accede a noticias actualizadas, comentarios legales, análisis éticos y estudios relevantes sobre la situación de los recursos genéticos.</p>
-                </div>
+  <section id="mapa">
+    <h1>MAPA DE RECURSOS GENETICOS</h1>
+    <p>Diseñamos sitios atractivos y funcionales. <a href="pagina mapa/index.html">Mapa Chile</a>
+</p>
+  </section>
 
-                <div class="service-card" id="guias">
-                    <div class="icon-wrapper"><i class="fas fa-clipboard-list"></i></div>
-                    <h3>Guías Prácticas</h3>
-                    <p>Encuentra plantillas de documentos, listas de verificación y vínculos a entidades para facilitar los trámites de acceso y uso legal de recursos genéticos.</p>
-                    <a href="pagina guias/index.html" class="button-action">VER GUIAS</a>
-                  </div>
+  <section id="denuncia">
+    <h1>ENVIAR DENUNCIAS</h1>
+    <p>Ingrese al link para rellenar formulario de denuncias. <a href="pagina denuncias/index.html">Denuncias</a></p>
+  </section>
 
-                <div class="service-card special-card" id="denuncias">
-                    <div class="icon-wrapper"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Reporta una Vulneración</h3>
-                    <p>¿Conoces alguna actividad que afecte los derechos de los pueblos indígenas o el uso de sus recursos? Tu aporte es crucial para proteger el conocimiento ancestral.</p>
-                    <p class="security-info">Puedes enviar tu reporte de forma **segura y confidencial**. Si lo prefieres, tu denuncia puede ser **completamente anónima**.</p>
-                    <a href="pagina denuncias/index.html" class="button-action high-visibility">ENVIAR REPORTE AHORA</a>
-                </div>
-            </div>
-        </section>
-    </main>
+   <section id="guia">
+    <h1>GUIAS PRACTICAS</h1>
+    <p>Conoce más sobre nuestro equipo. <a href="pagina guias/index.html">Guias practicas</a> </p>
+  </section>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 YachayWeb. Todos los derechos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos de Uso</a>
-                </div>
-        </div>
-    </footer>
+  <section id="nosotros">
+    <h1>NOSOTROS</h1>
+    <p>Conoce más sobre nuestro equipo.</p>
+  </section>
+
+  
 
 </body>
 </html>

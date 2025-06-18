@@ -1,73 +1,69 @@
-
-        const datosRegiones = {
+ const datosRegiones = {
             CLRM: {
                 titulo: "RM Región Metropolitana",
-                descripcion: "Capital: Santiago. Población: 7 millones."
+                descripcion: "Informacion faltante"
             },
             CLAP: {
                 titulo: "XV Region de Arica y Parinacota",
-                descripcion: "Región más al norte de Chile. Rica en cultura Aymara."
+                descripcion: "Informacion faltante"
             },
             CLTA: {
                 titulo: "I Region de Tarapacá",
-                descripcion: "Capital: Iquique. Famosa por la ZOFRI."
+                descripcion: "•Flora: Tamarungo, algarrobo, tola, rica-rica  •Fauna: vicuña, alpaca, flamenco andino  •Agrícola: papas altiplánicas, quinua.",
+                imagen: "imagenes/papa_antiplanica.png"
             },
             CLAN: {
                 titulo: "II Region de Antofagasta",
-                descripcion: "Zona minera por excelencia. Desierto de Atacama."
+                descripcion: "Informacion faltante"
             },
             CLAT:{
                 titulo: "III Region de Atacama",
-                descripcion: "Puro desierto loco"
+                descripcion: "Informacion faltante"
             },
             CLCO: {
                 titulo: "IV Region de Coquimbo",
-                descripcion: "Región costera con La Serena como capital."
+                descripcion: "Informacion faltante"
             },
             CLVS: {
                 titulo: "V Region de Valparaiso",
-                descripcion: "antiguo congreso"
+                descripcion: "Informacion faltante"
             },
             CLLI: {
-                titulo: "XI Region Libertador General Bernardo O'Higgins",
-                descripcion: "rancagua"
+                titulo: "VI Region Libertador General Bernardo O'Higgins",
+                descripcion: "Informacion faltante"
             },
             CLML: {
                 titulo: "VII Region del Maule",
-                descripcion: "tanto tanto"
+                descripcion: "Informacion faltante"
             },
             CLNB: {
                 titulo: "XVI Region del Ñuble",
-                descripcion: "Tanto tanto"
+                descripcion: "Informacion faltante"
             },
             CLAR: {
-                titulo: "IX Region de la Araucania",
-                descripcion: "quema de camiones"
+                titulo: "VIII Region de la Araucania",
+                descripcion: "Informacion faltante"
             },
             CLBI: {
-                titulo: "XIII Region del BIO BIO",
-                descripcion: "persa biobio"
+                titulo: "VIII Region del BIO BIO",
+                descripcion: "Informacion faltante"
             },
             CLLR: {
-                titulo: "XIVRegion de los Rios",
-                descripcion: "Muerte piñera"
+                titulo: "XIV Region de los Rios",
+                descripcion: "Informacion faltante"
             },
             CLLL: {
                 titulo: "X Region de los Lagos",
-                descripcion: "nada"
+                descripcion: "Informacion faltante"
             },
             CLAI: {
                 titulo: "XI Region Aisén del General Carlos Ibáñez del Campo",
-                descripcion: "a la cresta del mundo"
+                descripcion: "Informacion faltante"
             },
             CLMA: {
                 titulo: "XII Region Magallanes y Antártica Chilena",
-                descripcion: "ma helao que la chucha"
-            },
-
-
-
-            // Agrega más según los IDs
+                descripcion: "Informacion faltante"
+            }
         };
 
         // Detecta los clics en cada path del SVG
@@ -79,6 +75,16 @@
             if (datos) {
                 document.getElementById("titulo-region").textContent = datos.titulo;
                 document.getElementById("descripcion-region").textContent = datos.descripcion;
+                
+                // Mostrar u ocultar la imagen según corresponda
+                const imagenRegion = document.getElementById("imagen-region");
+                if (datos.imagen) {
+                    imagenRegion.src = datos.imagen;
+                    imagenRegion.style.display = "block";
+                } else {
+                    imagenRegion.style.display = "none";
+                }
+                
                 document.getElementById("info-region").style.display = "block";
             }
             });
