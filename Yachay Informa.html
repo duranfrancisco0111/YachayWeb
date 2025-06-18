@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yachay Informa</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🌱 Yachay Informa</h1>
+    <nav>
+      <ul>
+        <li><a href="#RUTA DE ACCESO">Inicio</a></li>
+        <li><a href="#" data-category="General">Todo</a></li>
+        <li><a href="#" data-category="Medioambiente">Medio Ambiente</a></li>
+        <li><a href="#" data-category="Clima">Cambio Climático</a></li>
+        <li><a href="#" data-category="Energia">Energías Renovables</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
+    <h1>Noticias destacadas...</h1>
+    <button class="prev">&#10094;</button>
+    <div class="slider-track">
+      <a href="https://www.utem.cl/universidad/" target="_blank"><img src="https://innova.utem.cl/wp-content/uploads/2021/10/Logo-Innova-9-01-e1634937525694.png" alt="Noticia 1" /></a>
+      <a href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/" target="_blank"><img src="https://www.vinculacion.utalca.cl/wp-content/uploads/2024/12/Logo-ODS.png" alt="Noticia 2" /></a>
+      <a href="https://mma.gob.cl" target="_blank"><img src="https://mma.gob.cl/wp-content/uploads/2018/10/Color_MinAmbiente-copia-2.png" alt="Noticia 3" /></a>
+    </div>
+    <button class="next">&#10095;</button>
+  </section>
+  
+  <!-- Noticias -->
+  <main class="contenedor">
+    <section class="grid-noticias">
+      <article class="noticia" data-category="Medioambiente General">
+        <img src="https://source.unsplash.com/400x200/?solar" alt="Noticia 1">
+        <h3>Impulso global a la energía solar</h3>
+        <p>Países aumentan inversión en energías limpias tras compromisos en la COP.</p>
+        <a href="#" class="btn-leer">Leer más</a>
+      </article>
+
+      <article class="noticia" data-category="Clima General">
+        <img src="https://source.unsplash.com/400x200/?ocean" alt="Noticia 2">
+        <h3>Protegiendo nuestros océanos</h3>
+        <p>Nuevas reservas marinas buscan frenar la pérdida de biodiversidad.</p>
+        <a href="#" class="btn-leer">Leer más</a>
+      </article>
+
+      <article class="noticia" data-category="Energia General">
+        <img src="https://source.unsplash.com/400x200/?recycle" alt="Noticia 3">
+        <h3>Ciudades que reciclan mejor</h3>
+        <p>Conoce las urbes con mayores tasas de reciclaje en América Latina.</p>
+        <a href="#" class="btn-leer">Leer más</a>
+      </article>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YachayWEB. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a> |
+      <a href="https://mail.google.com/mail/?view=cm&to=denunciasrecursosgeneticos@gmail.com" target="_blank">Contacto</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
