@@ -6,26 +6,29 @@
     <title>Guías Prácticas - YachayWeb</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="guias.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
      <nav>
         <ul class="menu">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a>
-        <ul class="submenu">
-          <li><a href="#consultoria">Consultoría</a></li>
-          <li><a href="../pagina mapa/index.html">Mapa de recursos geneticos</a></li>
-          <li><a href="../pagina denuncias/index.html">Enviar denuncias</a></li>
-        </ul>
-      </li>
-
-
+          <li><a href="../pagina mapa/index.html">Mapa </a></li>
+          <li><a href="../pagina denuncias/index.html">Denuncias</a></li>
+          <li><a href="../pagina guias/index.html">Guias</a></li>
+          <li><a href="../pagina informacion/informacion.html">Yachay Informa</a></li>
         </ul>
      </nav>
 
+     <header>
+       <h1>🌱 Yachay</h1>
+     </header>
+
     <section class="hero-section">
         <div class="hero-content">
+            <div class="hero-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
             <h1>Guías Prácticas</h1>
             <p>Herramientas concretas para proteger el conocimiento ancestral y gestionar el acceso a recursos genéticos según el ODS 15.6.</p>
         </div>
@@ -38,7 +41,11 @@
             <div class="services-grid">
                 <!-- 1 -->
                 <div class="service-card">
-                    <div class="icon-wrapper"><i class="fas fa-shield-alt"></i></div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                    </div>
                     <h3>Denunciar uso indebido de conocimientos tradicionales</h3>
                     <p>Cuando se usen saberes ancestrales sin el consentimiento de las comunidades:</p>
                     <ul>
@@ -46,55 +53,91 @@
                         <li>Falta de acuerdos comunitarios.</li>
                         <li>Uso comercial, investigativo o institucional.</li>
                     </ul>
-                    <a class="button-action high-visibility" href="https://portal.sma.gob.cl/index.php/portal-ciudadano/denuncia/" target="_blank">Ministerio del Medio Ambiente</a>
+                    <div class="card-actions">
+                        <a class="btn-service primary" href="https://portal.sma.gob.cl/index.php/portal-ciudadano/denuncia/" target="_blank">Ministerio del Medio Ambiente</a>
+                        <a class="btn-service secondary" href="../pagina denuncias/index.html">Nuestro Formulario</a>
+                    </div>
                 </div>
 
                 <!-- 2 -->
-                <div class="service-card special-card">
-                    <div class="icon-wrapper"><i class="fas fa-balance-scale"></i></div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Destacado</div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
                     <h3>Solicitar información sobre investigaciones biológicas</h3>
                     <p>Conoce si tu territorio está siendo investigado:</p>
                     <ul>
                         <li>Acceso a expedientes públicos.</li>
                         <li>Control ciudadano de la bioprospección.</li>
+                        <li>Transparencia en proyectos de investigación.</li>
                     </ul>
-                    <a class="button-action" href="https://www.portaltransparencia.cl" target="_blank">Portal de Transparencia</a>
+                    <div class="card-actions">
+                        <a class="btn-service primary featured" href="https://www.portaltransparencia.cl" target="_blank">Portal de Transparencia</a>
+                        <a class="btn-service secondary" href="#info-transparencia">Más Información</a>
+                    </div>
                 </div>
 
                 <!-- 3 -->
                 <div class="service-card">
-                    <div class="icon-wrapper"><i class="fas fa-seedling"></i></div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.06.87 1.93 1.93 1.93 1.06 0 1.93-.87 1.93-1.93 0-1.06-.87-1.93-1.93-1.93-1.06 0-1.93.87-1.93 1.93zM12 5.6c-1.06 0-1.93.87-1.93 1.93 0 1.06.87 1.93 1.93 1.93 1.06 0 1.93-.87 1.93-1.93 0-1.06-.87-1.93-1.93-1.93zM18.4 10.25c0-1.06-.87-1.93-1.93-1.93-1.06 0-1.93.87-1.93 1.93 0 1.06.87 1.93 1.93 1.93 1.06 0 1.93-.87 1.93-1.93z"/>
+                        </svg>
+                    </div>
                     <h3>Registrar y proteger saberes ancestrales</h3>
                     <p>Las comunidades pueden documentar sus prácticas:</p>
                     <ul>
                         <li>Protocolos comunitarios.</li>
                         <li>Registro de conocimientos en salud, agricultura, biodiversidad.</li>
+                        <li>Protección legal de saberes tradicionales.</li>
                     </ul>
-                    <a class="button-action" href="https://www.indh.cl/" target="_blank">Instituto Nacional de Derechos Humanos (INDH)</a>
+                    <div class="card-actions">
+                        <a class="btn-service primary" href="https://www.indh.cl/" target="_blank">Instituto Nacional de Derechos Humanos (INDH)</a>
+                        <a class="btn-service secondary" href="#protocolos">Ver Protocolos</a>
+                    </div>
                 </div>
 
                 <!-- 4 -->
                 <div class="service-card">
-                    <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-3.7 3.7c-.29.29-.29.77 0 1.06.29.29.77.29 1.06 0L16 10.83V22h4zm-8-3.5c0-.83-.67-1.5-1.5-1.5S9 17.67 9 18.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zM8 8c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2z"/>
+                        </svg>
+                    </div>
                     <h3>Organizar procesos de consulta previa</h3>
                     <p>Antes de que una institución acceda a tu territorio o saberes:</p>
                     <ul>
                         <li>Debe realizarse consulta previa, libre e informada.</li>
                         <li>Supervisado por instituciones públicas.</li>
+                        <li>Respeto a la autonomía de las comunidades.</li>
                     </ul>
-                    <a class="button-action" href="https://www.conadi.gob.cl/" target="_blank">CONADI - Derechos Indígenas</a>
+                    <div class="card-actions">
+                        <a class="btn-service primary" href="https://www.conadi.gob.cl/" target="_blank">CONADI - Derechos Indígenas</a>
+                        <a class="btn-service secondary" href="#consulta-previa">Guía de Consulta</a>
+                    </div>
                 </div>
 
                 <!-- 5 -->
                 <div class="service-card">
-                    <div class="icon-wrapper"><i class="fas fa-book"></i></div>
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                        </svg>
+                    </div>
                     <h3>Acceder a materiales educativos sobre ODS 15.6</h3>
                     <p>Aprende sobre tus derechos y cómo defenderlos en temas de biodiversidad:</p>
                     <ul>
                         <li>Manuales, videos y guías comunitarias.</li>
                         <li>Accesibles en formatos simples.</li>
+                        <li>Recursos en múltiples idiomas.</li>
                     </ul>
-                    <a class="button-action" href="https://www.un.org/sustainabledevelopment/es/biodiversity/" target="_blank">PNUMA - Programa ONU Medio Ambiente</a>
+                    <div class="card-actions">
+                        <a class="btn-service primary" href="https://www.un.org/sustainabledevelopment/es/biodiversity/" target="_blank">PNUMA - Programa ONU Medio Ambiente</a>
+                        <a class="btn-service secondary" href="#materiales">Descargar Materiales</a>
+                    </div>
                 </div>
             </div>
         </div>

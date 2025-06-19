@@ -3,69 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-   
+  <meta name="description" content="YachayWeb - Plataforma integral para la protección y gestión de recursos genéticos, conocimientos ancestrales y biodiversidad de Chile." />
+  <meta name="keywords" content="recursos genéticos, biodiversidad, Chile, conocimientos ancestrales, denuncias ambientales, mapa genético" />
+  <meta name="author" content="YachayWeb" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yachayweb.cl/" />
+  <meta property="og:title" content="YachayWeb - Protegiendo la Biodiversidad de Chile" />
+  <meta property="og:description" content="Plataforma integral para la protección y gestión de recursos genéticos, conocimientos ancestrales y biodiversidad de Chile." />
+  <meta property="og:image" content="https://yachayweb.cl/images/og-image.jpg" />
 
-  <title>YachayWeb</title>
- 
-  </style>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://yachayweb.cl/" />
+  <meta property="twitter:title" content="YachayWeb - Protegiendo la Biodiversidad de Chile" />
+  <meta property="twitter:description" content="Plataforma integral para la protección y gestión de recursos genéticos, conocimientos ancestrales y biodiversidad de Chile." />
+  <meta property="twitter:image" content="https://yachayweb.cl/images/twitter-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" as="style" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>YachayWeb - Protegiendo la Biodiversidad de Chile</title>
 </head>
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <nav>
+  <nav role="navigation" aria-label="Navegación principal">
     <ul class="menu">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a>
-        <ul class="submenu">
-          <li><a href="#consultoria">Consultoría</a></li>
-          <li><a href="#mapa">Mapa de recursos geneticos</a></li>
-          <li><a href="#denuncias">Enviar denuncias</a></li>
-          <li><a href="#guia">Guias practicas</a></li>
+      <li><a href="index.html" aria-current="page">Inicio</a></li>
+      <li>
+        <a href="#servicios" aria-haspopup="true" aria-expanded="false">Servicios</a>
+        <ul class="submenu" role="menu">
+          <li><a href="#consultoria" role="menuitem">Consultoría</a></li>
+          <li><a href="pagina mapa/index.html" role="menuitem">Mapa de recursos genéticos</a></li>
+          <li><a href="pagina denuncias/index.html" role="menuitem">Enviar denuncias</a></li>
+          <li><a href="pagina guias/index.html" role="menuitem">Guías prácticas</a></li>
+          <li><a href="pagina informacion/informacion.html" role="menuitem">Yachay Informa</a></li>
         </ul>
       </li>
       <li><a href="#nosotros">Nosotros</a></li>
-
     </ul>
   </nav>
 
-  <section id="inicio">
-    <h1>INICIO</h1>
-    <p>Bienvenido a nuestra página.</p>
+  <header role="banner">
+    <h1>🌱 Yachay</h1>
+    <p>Protegiendo los recursos genéticos y conocimientos ancestrales de Chile</p>
+  </header>
 
-  </section>
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h2 id="hero-title">Bienvenido a YachayWeb</h2>
+        <p>Plataforma integral para la protección y gestión de recursos genéticos, conocimientos ancestrales y biodiversidad de Chile.</p>
+        <div class="hero-buttons">
+          <a href="#servicios" class="btn-primary">Explorar Servicios</a>
+          <a href="pagina denuncias/index.html" class="btn-secondary">Reportar Incidente</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="servicios">
-    <h1>SERVICIOS</h1>
-    <p>Explora lo que ofrecemos.</p>
-  </section>
+    <!-- Servicios Section -->
+    <section id="servicios" class="services-section" aria-labelledby="servicios-title">
+      <div class="container">
+        <h2 id="servicios-title">Nuestros Servicios</h2>
+        <p>Ofrecemos herramientas y recursos para proteger la biodiversidad y los conocimientos ancestrales de Chile.</p>
+        
+        <div class="services-grid" role="list">
+          <article class="service-card" role="listitem">
+            <div class="icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3>Consultoría Especializada</h3>
+            <p>Asesoramiento experto en recursos genéticos y conocimientos ancestrales con enfoque legal y técnico.</p>
+            <div class="card-actions">
+              <a href="#consultoria" class="btn-service primary">Más Información</a>
+              <a href="mailto:denunciasrecursosgeneticos@gmail.com" class="btn-service secondary">Contactar</a>
+            </div>
+          </article>
 
-  <section id="consultoria">
-    <h1>CONSULTORIA</h1>
-    <p>Te ayudamos a tomar buenas decisiones.</p>
-  </section>
+          <article class="service-card" role="listitem">
+            <div class="icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+              </svg>
+            </div>
+            <h3>Mapa de Recursos Genéticos</h3>
+            <p>Explora la biodiversidad y recursos genéticos de Chile en nuestro mapa interactivo con datos en tiempo real.</p>
+            <div class="card-actions">
+              <a href="pagina mapa/index.html" class="btn-service primary">Explorar Mapa</a>
+              <a href="#mapa-info" class="btn-service secondary">Ver Estadísticas</a>
+            </div>
+          </article>
 
-  <section id="mapa">
-    <h1>MAPA DE RECURSOS GENETICOS</h1>
-    <p>Diseñamos sitios atractivos y funcionales. <a href="pagina mapa/index.html">Mapa Chile</a>
-</p>
-  </section>
+          <article class="service-card featured" role="listitem">
+            <div class="icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+              </svg>
+            </div>
+            <div class="featured-badge">Destacado</div>
+            <h3>Sistema de Denuncias</h3>
+            <p>Reporta incidentes relacionados con recursos genéticos y conocimientos ancestrales de forma segura y confidencial.</p>
+            <div class="card-actions">
+              <a href="pagina denuncias/index.html" class="btn-service primary featured">Reportar Ahora</a>
+              <a href="#denuncias-info" class="btn-service secondary">Cómo Funciona</a>
+            </div>
+          </article>
 
-  <section id="denuncia">
-    <h1>ENVIAR DENUNCIAS</h1>
-    <p>Ingrese al link para rellenar formulario de denuncias. <a href="pagina denuncias/index.html">Denuncias</a></p>
-  </section>
+          <article class="service-card" role="listitem">
+            <div class="icon-wrapper" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3>Guías Prácticas</h3>
+            <p>Recursos y guías para el manejo responsable de recursos genéticos y protección de conocimientos ancestrales.</p>
+            <div class="card-actions">
+              <a href="pagina guias/index.html" class="btn-service primary">Ver Guías</a>
+              <a href="#guias-info" class="btn-service secondary">Descargar PDF</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-   <section id="guia">
-    <h1>GUIAS PRACTICAS</h1>
-    <p>Conoce más sobre nuestro equipo. <a href="pagina guias/index.html">Guias practicas</a> </p>
-  </section>
+    <!-- Consultoría Section -->
+    <section id="consultoria" class="consultoria-section" aria-labelledby="consultoria-title">
+      <div class="container">
+        <h2 id="consultoria-title">Consultoría Especializada</h2>
+        <p>Nuestro equipo de expertos te ayuda a tomar decisiones informadas sobre recursos genéticos y conocimientos ancestrales.</p>
+        
+        <div class="consultoria-grid" role="list">
+          <article class="consultoria-card" role="listitem">
+            <h3>Asesoramiento Legal</h3>
+            <ul>
+              <li>Marco normativo de recursos genéticos</li>
+              <li>Protección de conocimientos ancestrales</li>
+              <li>Cumplimiento de CPLI</li>
+            </ul>
+          </article>
+          
+          <article class="consultoria-card" role="listitem">
+            <h3>Gestión de Biodiversidad</h3>
+            <ul>
+              <li>Conservación de especies nativas</li>
+              <li>Manejo sostenible de recursos</li>
+              <li>Monitoreo de biodiversidad</li>
+            </ul>
+          </article>
+          
+          <article class="consultoria-card" role="listitem">
+            <h3>Capacitación</h3>
+            <ul>
+              <li>Talleres y seminarios</li>
+              <li>Material educativo</li>
+              <li>Asesoría técnica</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="nosotros">
-    <h1>NOSOTROS</h1>
-    <p>Conoce más sobre nuestro equipo.</p>
-  </section>
+    <!-- Yachay Informa Section -->
+    <section id="informacion" class="informacion-section" aria-labelledby="informacion-title">
+      <div class="container">
+        <h2 id="informacion-title">🌱 Yachay Informa</h2>
+        <p>Mantente informado sobre las últimas noticias y desarrollos en medio ambiente, cambio climático y energías renovables.</p>
+        
+        <div class="info-highlights" role="list">
+          <article class="info-card" role="listitem">
+            <h3>🌿 Medio Ambiente</h3>
+            <p>Noticias sobre conservación y biodiversidad</p>
+          </article>
+          <article class="info-card" role="listitem">
+            <h3>🌍 Cambio Climático</h3>
+            <p>Actualizaciones sobre el clima global</p>
+          </article>
+          <article class="info-card" role="listitem">
+            <h3>⚡ Energías Renovables</h3>
+            <p>Avances en tecnologías limpias</p>
+          </article>
+        </div>
+        
+        <div class="section-actions">
+          <a href="pagina informacion/informacion.html" class="btn-primary">Leer Noticias</a>
+        </div>
+      </div>
+    </section>
 
-  
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros-section" aria-labelledby="nosotros-title">
+      <div class="container">
+        <h2 id="nosotros-title">Sobre Nosotros</h2>
+        <p>Somos un equipo comprometido con la protección de los recursos genéticos y conocimientos ancestrales de Chile.</p>
+        
+        <div class="nosotros-grid" role="list">
+          <article class="nosotros-card" role="listitem">
+            <h3>Misión</h3>
+            <p>Proteger y promover el uso sostenible de los recursos genéticos y conocimientos ancestrales de Chile.</p>
+          </article>
+          
+          <article class="nosotros-card" role="listitem">
+            <h3>Visión</h3>
+            <p>Ser la plataforma líder en la gestión y protección de la biodiversidad y saberes ancestrales.</p>
+          </article>
+          
+          <article class="nosotros-card" role="listitem">
+            <h3>Valores</h3>
+            <ul>
+              <li>Respeto por la biodiversidad</li>
+              <li>Protección de conocimientos ancestrales</li>
+              <li>Sostenibilidad ambiental</li>
+              <li>Transparencia y ética</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 YachayWEB. Todos los derechos reservados.</p>
+      <nav class="redes" aria-label="Redes sociales">
+        <a href="#" aria-label="Síguenos en Facebook">Facebook</a> |
+        <a href="#" aria-label="Síguenos en Instagram">Instagram</a> |
+        <a href="#" aria-label="Síguenos en Twitter">Twitter</a> |
+        <a href="https://mail.google.com/mail/?view=cm&to=denunciasrecursosgeneticos@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo electrónico">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Lazy loading script -->
+  <script>
+    // Lazy loading for images
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+      
+      images.forEach(img => imageObserver.observe(img));
+    });
+  </script>
 </body>
 </html>

@@ -1,42 +1,45 @@
 body {
-    background: #F4EBD9;
+    background: linear-gradient(135deg, #E8F5E8 0%, #F3E5F5 25%, #FFF3E0 50%, #FFEBEE 75%, #E8F5E8 100%);
     display: flex;
     place-content: left left;
-
+    font-family: 'Nunito', sans-serif;
 }
 
 .container{
     width: 50%;
 }
 .container path{
-    fill: #DAF7A6;
-    stroke: green;
+    fill: #C8E6C9;
+    stroke: #2E7D32;
     stroke-width: 2px;
+    transition: all 0.3s ease;
 }
 
 .container :hover{
-    fill: green ;
-
+    fill: #4CAF50;
+    stroke: #D32F2F;
+    stroke-width: 3px;
 }
+
 .info-box {
   margin-top: 20px;
   padding: 15px;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   max-width: 300px;
+  border: 1px solid #C8E6C9;
 }
+
 #imagen-region{
     max-width: 100%;
     height: auto;
     max-width: 150px;
     margin-top: 15px;
-    border-radius: 4px;
+    border-radius: 8px;
     display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
-
-
 
 ul.menu {
     list-style: none;
@@ -53,16 +56,19 @@ ul.menu {
 
   ul.menu li a {
     text-decoration: none;
-    color: black;
+    color: #2E7D32;
     padding: 0.5rem 1rem;
     display: block;
-    transition: background 0.3s, color 0.3s;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: 500;
   }
 
   ul.menu li a:hover {
-    background-color: #4D2D18;
-    border-radius: 5px;
-    color: #fff;
+    background: linear-gradient(135deg, #D32F2F, #FF6F00);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
   }
 
   ul.menu li ul.submenu {
@@ -70,12 +76,14 @@ ul.menu {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #8A6240;
+    background: white;
     list-style: none;
     padding: 0;
     margin: 0;
     min-width: 150px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #C8E6C9;
   }
 
   ul.menu li:hover ul.submenu {
@@ -84,8 +92,86 @@ ul.menu {
 
   ul.submenu li a {
     padding: 0.5rem 1rem;
+    color: #8D6E63;
   }
 
   ul.submenu li a:hover {
-    background-color: #4D2D18;
+    background: linear-gradient(135deg, #F1F8E9, #C8E6C9);
+    color: #2E7D32;
   }
+
+/* Barra de navegación global */
+.navbar {
+  background: linear-gradient(135deg, #2E7D32, #8D6E63);
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.navbar ul li {
+  position: relative;
+}
+.navbar ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+}
+.navbar ul li a:hover {
+  background: linear-gradient(135deg, #D32F2F, #FF6F00);
+  transform: translateY(-2px);
+}
+
+/* Submenú Noticias */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 10;
+  border-radius: 8px;
+  border: 1px solid #C8E6C9;
+}
+.navbar .dropdown-menu li a {
+  padding: 12px 20px;
+  color: #8D6E63;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.navbar .dropdown-menu li a:hover {
+  background: linear-gradient(135deg, #F1F8E9, #C8E6C9);
+  color: #2E7D32;
+}
+
+@media (max-width: 800px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li a {
+    width: 100%;
+    padding: 14px 10px;
+  }
+  .navbar .dropdown-menu {
+    min-width: 100%;
+    position: static;
+    box-shadow: none;
+  }
+}

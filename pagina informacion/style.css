@@ -1,0 +1,474 @@
+/* Importar estilos principales para acceder a las variables CSS */
+@import url('../style.css');
+
+/* Estilos específicos para Yachay Informa */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* Navegación de categorías */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+header nav a.active {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(211, 47, 47, 0.2));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+header nav a.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #2E7D32, #D32F2F, #FF6F00);
+    border-radius: 1px;
+}
+
+/* Slider más grande */
+.slider {
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    background: #fff;
+    padding: 2rem 0 3rem 0;
+}
+
+.slider h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    width: 650px;
+}
+
+.slider-track a {
+    min-width: 650px;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.slider-track img {
+    width: 600px;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: linear-gradient(135deg, #f8f4ed 0%, #e6f4ea 50%, #fbeee6 100%);
+    transition: transform 0.3s ease;
+    padding: 10px;
+}
+
+.slider-track img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Botones del slider encima de las imágenes */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, rgba(46, 125, 50, 0.9), rgba(211, 47, 47, 0.9));
+    color: white;
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.prev:hover, .next:hover {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.9), rgba(255, 111, 0, 0.9));
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+/* Indicadores del slider */
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.slider-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(141, 110, 99, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-indicator.active {
+    background: linear-gradient(135deg, #2E7D32, #D32F2F);
+    transform: scale(1.2);
+}
+
+@media (max-width: 700px) {
+    .slider, .slider-track, .slider-track a {
+        max-width: 98vw;
+        min-width: 98vw;
+    }
+    .slider-track img {
+        width: 95vw;
+        height: 160px;
+    }
+    .prev { left: 0.5rem; }
+    .next { right: 0.5rem; }
+    .prev, .next {
+        padding: 0.8rem 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Grid de noticias */
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.noticia {
+    background: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.noticia h3 {
+    color: var(--secondary-color);
+    margin: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.noticia h3::before {
+    font-size: 1.4rem;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+.noticia p {
+    color: var(--text-color-dark);
+    margin: 0 1rem 1rem 1rem;
+    line-height: 1.6;
+}
+
+.btn-leer {
+    display: inline-block;
+    background: linear-gradient(135deg, #D32F2F, #FF6F00);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 0 1rem 1rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-leer:hover {
+    background: linear-gradient(135deg, #FF6F00, #D32F2F);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+/* Clases para filtrado */
+.noticia.hidden {
+    display: none;
+}
+
+.slider.oculto {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.redes a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.redes a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .slider-track img {
+        width: 280px;
+        height: 150px;
+    }
+    
+    .grid-noticias {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos mejorados para la barra de navegación */
+.navbar {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all var(--transition-normal);
+    font-weight: 500;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Dropdown menu: opciones una debajo de otra y ancho completo */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--card-background);
+    border: 1px solid var(--border-color-light);
+    border-radius: 10px;
+    box-shadow: var(--shadow-heavy);
+    min-width: 220px;
+    width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
+    z-index: 1001;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.navbar .dropdown-menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .dropdown-menu li a {
+    color: var(--text-color-dark);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color-light);
+    display: block;
+    transition: all var(--transition-normal);
+    font-weight: 400;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background: var(--form-background);
+    color: var(--primary-color);
+    padding-left: 2.2rem;
+    transform: translateX(5px);
+}
+
+/* Indicador de dropdown */
+.navbar .dropdown > a::after {
+    content: '▼';
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    transition: transform var(--transition-normal);
+}
+
+.navbar .dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* Mejorar el dropdown para que funcione con clic */
+.navbar .dropdown > a {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media (max-width: 700px) {
+    .slider, .slider-track, .slider-track a {
+        max-width: 98vw;
+        min-width: 98vw;
+    }
+    .slider-track img {
+        width: 95vw;
+        height: 120px;
+    }
+    .navbar .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        pointer-events: auto;
+        padding: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    .navbar .dropdown-menu li a {
+        color: white;
+        padding: 0.8rem 2rem;
+        border-bottom: none;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+    .navbar .dropdown-menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        padding-left: 2.5rem;
+        transform: none;
+    }
+} 

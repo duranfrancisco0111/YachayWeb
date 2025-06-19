@@ -3,139 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="style.css">
   <title>Formulario de Denuncias - YachayWeb</title>
- 
 </head>
 <body>
   <nav>
     <ul class="menu">
       <li><a href="../index.html">Inicio</a></li>
-      <li><a href="#servicios">Servicios</a>
-        <ul class="submenu">
-          <li><a href="#consultoria">Consultoría</a></li>
           <li><a href="../pagina mapa/index.html">Mapa de recursos geneticos</a></li>
-          <li> <a href="../pagina guias/index.html">Guia practicas</a></li>
+          <li><a href="../pagina denuncias/index.html">Enviar denuncias</a></li>
+          <li><a href="../pagina guias/index.html">Guias practicas</a></li>
+          <li><a href="../pagina informacion/informacion.html">Yachay Informa</a></li>
         </ul>
       </li>
-
-
     </ul>
   </nav>
 
-  <form action="https://formspree.io/f/xpwrabwl" method="POST" enctype="multipart/form-data">
-    <label>
-      <h1> Formulario de Denuncias</h1>
+  <header>
+    <h1>🌱 Yachay</h1>
+  </header>
 
-
-      <!--Sección1: Detalles del incidente-->
-      <h2>Detalles del incidente</h2>
-
-    <label>Título del Incidente: <input type="text" name="Título Denuncia" placeholder="EJ: Uso indebido de conocimiento ancestral en Arica" required> 
-    </label> 
-
-    <label>Tipo de incidente/denuncia: <select name="tipó_incidente"required>
-      <option disabled selected>Seleccione una opción</option>
-      <option>Apropiación/Uso Indebido de Recursos Genéticos</option>
-      <option>Apropiación/Uso Indebido de Conocimientos Ancestrales</option>
-      <option>Daño Ambiental a la Biodiversidad</option>
-      <option>Incumplimiento de CPLI</option>
-      <option>Actividad Comercial Ilegal Relacionada con Biodiversidad</option>
-      <option>Violación de Derechos de Pueblos Originarios</option>
-      <option>Otro</option>
-    </selec>
-    </label>
-
-    <label>Especifique si eligió "Otro":<input type="text" name="tipo_otro" placeholder="Descripción del tipó de incidente">
-    </label>
-
-    <label>Fecha de incidente:<input type="date" name="fecha_incidente">
-    </label>
-    
-    <label>Hora aproximada del incidente:<input type="time" name="hora_incidente">
-    </label>
-
-    <label>Descripcion detallada del incidente:<textarea name="descripcion" rows="6" placeholder="Describa lo sucedido  con el mayor detalle posible..."></textarea>
-    </label>
-
-    <label>Partes involucradas (si las conoce)<textarea name="involucrados" rows="3" placeholder="Ej:Empresa X, Comunidad Y, Persona Z "></textarea>
-    </label>
-
-    <label for="evidencia">Adjuntar evidencia (opcional):</label>
-    <input type="file" name="evidencia" id="evidencia" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.mp4" multiple>
-    <small class="hint">Formatos permitidos: jpg, png, pdf, doc, mp4. Tamaño máximo recomendado: 10MB.</small>
-        
-
-    <!-- Sección 2: Ubicación -->
-    <h2>Ubicación del Incidente</h2>
-
-    <div class="form-group">
-      <label for="region">Región del incidente:</label>
-      <select name="region" id="region" required>
-        <option value="">Seleccione una región</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="comuna">Comuna del incidente:</label>
-      <select name="comuna" id="comuna" required>
-        <option value="">Seleccione una comuna</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="direccion">Dirección o referencia del lugar específico:</label>
-      <input type="text" name="direccion" id="direccion" placeholder="Ej: Ruta 5 Norte Km 100, sector Ralco">
-    </div>
-
-    
-    <!-- Sección 3: Información del Denunciante -->
-    <h2>Información del Denunciante (opcional)</h2>
-
-    <label>
-      <input type="checkbox" id="anonimo" onchange="toggleDenunciante()"> Deseo que mi denuncia sea anónima
-    </label>
-
-    <div id="denunciante-info">
-      <label>Nombre completo:
-        <input type="text" name="nombre">
-      </label>
-
-      <label>Correo electrónico:
-        <input type="email" name="correo">
-      </label>
-
-      <label for="telefono">Teléfono de contacto:</label>
-      <div class="telefono-wrapper">
-        <span class="codigo-pais">+56</span>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,9}" maxlength="9" placeholder="912345678" inputmode="numeric">
+  <div class="container">
+    <div class="form-header">
+      <div class="header-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+        </svg>
       </div>
-      <small>Ingrese solo los números después del +56. Ej: 912345678. No incluya espacios ni guiones.</small>
-      
+      <h1>Formulario de Denuncias</h1>
+      <p>Reporta incidentes relacionados con recursos genéticos y conocimientos ancestrales de forma segura y confidencial.</p>
     </div>
-    <!-- Sección 4: Declaración y Envío -->
-    <h2>Declaración y Envío</h2>
 
-    <label>
-      <input type="checkbox" name="veracidad" required>
-      Declaro que la información proporcionada es verídica y de mi conocimiento.
-    </label>
+    <form action="https://formspree.io/f/xpwrabwl" method="POST" enctype="multipart/form-data" class="denuncia-form">
+      
+      <!-- Sección 1: Detalles del incidente -->
+      <section class="form-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+          </div>
+          <h2>Detalles del Incidente</h2>
+        </div>
 
-    <label>
-      Tu mensaje:
-      <textarea name="message" rows="5" required></textarea>
-    </label>
+        <div class="form-group">
+          <label for="titulo">Título del Incidente</label>
+          <input type="text" id="titulo" name="Título Denuncia" placeholder="Ej: Uso indebido de conocimiento ancestral en Arica" required>
+        </div>
 
-    <button type="submit">Enviar Denuncia</button>
-  </form>
+        <div class="form-group">
+          <label for="tipo-incidente">Tipo de incidente/denuncia</label>
+          <select id="tipo-incidente" name="tipó_incidente" required>
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="recursos-geneticos">Apropiación/Uso Indebido de Recursos Genéticos</option>
+            <option value="conocimientos-ancestrales">Apropiación/Uso Indebido de Conocimientos Ancestrales</option>
+            <option value="daño-ambiental">Daño Ambiental a la Biodiversidad</option>
+            <option value="incumplimiento-cpli">Incumplimiento de CPLI</option>
+            <option value="actividad-ilegal">Actividad Comercial Ilegal Relacionada con Biodiversidad</option>
+            <option value="derechos-pueblos">Violación de Derechos de Pueblos Originarios</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="otro-tipo" style="display: none;">
+          <label for="tipo-otro">Especifique el tipo de incidente</label>
+          <input type="text" id="tipo-otro" name="tipo_otro" placeholder="Descripción del tipo de incidente">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha-incidente">Fecha del incidente</label>
+            <input type="date" id="fecha-incidente" name="fecha_incidente">
+          </div>
+          
+          <div class="form-group">
+            <label for="hora-incidente">Hora aproximada</label>
+            <input type="time" id="hora-incidente" name="hora_incidente">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción detallada del incidente</label>
+          <textarea id="descripcion" name="descripcion" rows="6" placeholder="Describa lo sucedido con el mayor detalle posible..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="involucrados">Partes involucradas (si las conoce)</label>
+          <textarea id="involucrados" name="involucrados" rows="3" placeholder="Ej: Empresa X, Comunidad Y, Persona Z"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="evidencia">Adjuntar evidencia (opcional)</label>
+          <div class="file-upload">
+            <input type="file" id="evidencia" name="evidencia" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.mp4" multiple>
+            <div class="file-upload-text">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+              </svg>
+              <span>Haz clic para seleccionar archivos</span>
+            </div>
+          </div>
+          <small class="hint">Formatos permitidos: jpg, png, pdf, doc, mp4. Tamaño máximo recomendado: 10MB.</small>
+        </div>
+      </section>
+
+      <!-- Sección 2: Ubicación -->
+      <section class="form-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <h2>Ubicación del Incidente</h2>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="region">Región del incidente</label>
+            <select id="region" name="region" required>
+              <option value="">Seleccione una región</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comuna">Comuna del incidente</label>
+            <select id="comuna" name="comuna" required>
+              <option value="">Seleccione una comuna</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="direccion">Dirección o referencia del lugar específico</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Ej: Ruta 5 Norte Km 100, sector Ralco">
+        </div>
+      </section>
+
+      <!-- Sección 3: Información del Denunciante -->
+      <section class="form-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <h2>Información del Denunciante (Opcional)</h2>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="anonimo" onchange="toggleDenunciante()">
+            <span class="checkmark"></span>
+            Deseo que mi denuncia sea anónima
+          </label>
+        </div>
+
+        <div id="denunciante-info">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre">
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono de contacto</label>
+            <div class="telefono-wrapper">
+              <span class="codigo-pais">+56</span>
+              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,9}" maxlength="9" placeholder="912345678" inputmode="numeric">
+            </div>
+            <small class="hint">Ingrese solo los números después del +56. Ej: 912345678</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 4: Declaración y Envío -->
+      <section class="form-section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+          </div>
+          <h2>Declaración y Envío</h2>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="veracidad" required>
+            <span class="checkmark"></span>
+            Declaro que la información proporcionada es verídica y de mi conocimiento
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Comentarios adicionales</label>
+          <textarea id="message" name="message" rows="5" placeholder="Agregue cualquier información adicional que considere relevante..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            Enviar Denuncia
+          </button>
+        </div>
+      </section>
+    </form>
+  </div>
 
   <script>
     function toggleDenunciante() {
       const check = document.getElementById('anonimo').checked;
-      document.getElementById('denunciante-info').style.display = check ? 'none' : 'block';}
-  </script>
-  <script src="regiones.js"></script> 
-  
+      document.getElementById('denunciante-info').style.display = check ? 'none' : 'block';
+    }
 
+    // Mostrar/ocultar campo "otro" según selección
+    document.getElementById('tipo-incidente').addEventListener('change', function() {
+      const otroTipo = document.getElementById('otro-tipo');
+      if (this.value === 'otro') {
+        otroTipo.style.display = 'block';
+      } else {
+        otroTipo.style.display = 'none';
+      }
+    });
+
+    // Mejorar la experiencia del file upload
+    document.getElementById('evidencia').addEventListener('change', function() {
+      const fileText = this.parentElement.querySelector('.file-upload-text span');
+      if (this.files.length > 0) {
+        fileText.textContent = `${this.files.length} archivo(s) seleccionado(s)`;
+      } else {
+        fileText.textContent = 'Haz clic para seleccionar archivos';
+      }
+    });
+  </script>
+  <script src="regiones.js"></script>
 </body>
 </html>

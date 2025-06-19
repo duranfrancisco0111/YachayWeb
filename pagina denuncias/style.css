@@ -1,164 +1,437 @@
 /* Color Palette Variables (Chilean Indigenous Inspiration) */
 :root {
-    --primary-color: #A36A00;   /* Deep Ochre/Gold - warmth, ancestral knowledge, earth */
-    --secondary-color: #0A4B6B; /* Deep Indigo/Teal Blue - sky, water, wisdom, depth */
-    --accent-color: #28a745;     /* Vibrant Green - life, biodiversity, growth, renewal */
+    --primary-color: #2E7D32;   /* Deep Green - nature, life, sustainability */
+    --secondary-color: #8D6E63; /* Warm Brown - earth, ancestral knowledge */
+    --accent-color: #D32F2F;     /* Vibrant Red - energy, urgency, biodiversity */
+    --tertiary-color: #FF6F00;   /* Orange - warmth, creativity, innovation */
 
     /* Neutral colors for readability and balance in forms */
-    --form-background: #F8F4ED; /* Very light earthy beige for general backgrounds */
+    --form-background: #F1F8E9; /* Very light green for general backgrounds */
     --card-background: #FFFFFF;  /* Crisp white for content cards/form itself */
-    --text-color-dark: #383838;  /* Dark charcoal for main text */
-    --text-color-medium: #6a6a6a; /* Medium grey for secondary text/hints */
-    --border-color-light: #D3CDC4; /* Soft grey-beige for subtle borders */
+    --text-color-dark: #2E7D32;  /* Dark green for main text */
+    --text-color-medium: #8D6E63; /* Medium brown for secondary text/hints */
+    --border-color-light: #C8E6C9; /* Light green for subtle borders */
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--form-background); /* Using the earthy beige background */
+    background: linear-gradient(135deg, #E8F5E8 0%, #F3E5F5 25%, #FFF3E0 50%, #FFEBEE 75%, #E8F5E8 100%);
+    font-family: 'Nunito', sans-serif;
     margin: 0;
-    padding: 20px;
-    color: var(--text-color-dark); /* Main text in dark charcoal */
+    padding: 0;
+    min-height: 100vh;
 }
 
-form {
-    max-width: 700px;
-    margin: auto;
-    background-color: var(--card-background); /* Form background in crisp white */
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-left: 8px solid var(--primary-color); /* Left border in Deep Ochre/Gold */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-h1, h2 {
-    color: var(--secondary-color); /* Headings in Deep Indigo/Teal Blue */
-    margin-bottom: 20px;
+/* Header del formulario */
+.form-header {
     text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #2E7D32, #8D6E63, #D32F2F);
+    color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(46, 125, 50, 0.3);
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: var(--text-color-dark); /* Labels in dark charcoal */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="time"],
-select,
-textarea {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 18px;
-    border: 1px solid var(--border-color-light); /* Borders in soft grey-beige */
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: var(--form-background); /* Input background in earthy beige */
-    transition: border-color 0.3s, background-color 0.3s;
-    color: var(--text-color-dark); /* Input text in dark charcoal */
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--primary-color); /* Focus border in Deep Ochre/Gold */
-    background-color: var(--card-background); /* Focus background in crisp white */
-    outline: none;
-}
-
-button {
-    background-color: var(--accent-color); /* Button background in Vibrant Green */
-    color: #ffffff;
-    padding: 12px 22px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: var(--primary-color); /* Button hover to Deep Ochre/Gold */
-}
-
-.checkbox-group {
-    margin-bottom: 20px;
-}
-
-input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-small, .hint {
-    font-size: 13px;
-    color: var(--text-color-medium); /* Hints in medium grey */
-    display: block;
-    margin-top: 3px;
-    margin-bottom: 18px;
-}
-nav {
-      background-color: #8A6240;
-      padding: 1rem 0.1rem;
-
-      max-height: 60px;
-
-      top: 0;
-
-      max-width: 750px;     /* ❗️esto limita el ancho total */
-      margin: 0 auto; 
-      border-radius: 10px;      
-  }
-ul.menu {
-    list-style: none;
+.header-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
     display: flex;
-    margin: 0;
-    padding: 0;
+    align-items: center;
     justify-content: center;
-  }
+}
 
-  ul.menu li {
-    margin: 0 1rem;
-    position: relative;
-  }
+.header-icon svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
 
-  ul.menu li a {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem 1rem;
-    display: block;
-    transition: background 0.3s, color 0.3s;
-  }
+.form-header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
 
-  ul.menu li a:hover {
-    background-color: #4D2D18;
-    border-radius: 5px;
-    color: #fff;
-  }
-
-  ul.menu li ul.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #8A6240;
-    list-style: none;
-    padding: 0;
+.form-header p {
     margin: 0;
-    min-width: 150px;
-    border-radius: 5px;
-  }
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
 
-  ul.menu li:hover ul.submenu {
+/* Formulario principal */
+.denuncia-form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #C8E6C9;
+}
+
+/* Secciones del formulario */
+.form-section {
+    padding: 2rem;
+    border-bottom: 1px solid #C8E6C9;
+    position: relative;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #C8E6C9;
+}
+
+.section-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2E7D32, #8D6E63, #D32F2F);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.section-icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group label {
     display: block;
-  }
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: 0.95rem;
+}
 
-  ul.submenu li a {
-    padding: 0.5rem 1rem;
-  }
+/* Inputs y selects */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #C8E6C9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    box-sizing: border-box;
+}
 
-  ul.submenu li a:hover {
-    background-color: #4D2D18;
-  }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D32F2F;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* File upload personalizado */
+.file-upload {
+    position: relative;
+    border: 2px dashed #D32F2F;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #F1F8E9;
+}
+
+.file-upload:hover {
+    border-color: #FF6F00;
+    background: #E8F5E8;
+    transform: translateY(-2px);
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #D32F2F;
+}
+
+.file-upload-text svg {
+    width: 32px;
+    height: 32px;
+}
+
+.file-upload-text span {
+    font-weight: 500;
+}
+
+/* Checkbox personalizado */
+.checkbox-group {
+    margin-bottom: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-color-dark);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 2px solid #28a745;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover .checkmark {
+    background-color: #e8f5e8;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+    background-color: #28a745;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Teléfono con código de país */
+.telefono-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.telefono-wrapper:focus-within {
+    border-color: #28a745;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.codigo-pais {
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-right: 1px solid #e9ecef;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: 0.9rem;
+}
+
+.telefono-wrapper input {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    flex: 1;
+}
+
+.telefono-wrapper input:focus {
+    box-shadow: none;
+    transform: none;
+}
+
+/* Hints y textos pequeños */
+.hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-color-medium);
+    font-style: italic;
+}
+
+/* Botón de envío */
+.form-actions {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #dc3545, #fd7e14);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-submit:hover::before {
+    left: 100%;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background: linear-gradient(135deg, #fd7e14, #dc3545);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.btn-submit svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .form-header {
+        padding: 1.5rem;
+    }
+    
+    .form-header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-section {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .section-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .section-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header {
+        padding: 1rem;
+    }
+    
+    .form-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
+    
+    .file-upload {
+        padding: 1.5rem;
+    }
+}
