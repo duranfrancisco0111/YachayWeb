@@ -1,68 +1,68 @@
 const datosRegiones = {
     CLRM: {
         titulo: "RM Región Metropolitana",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Quillay, Espino.<br><br>• Fauna: Chinchilla, Sapito de cuatro ojos.<br><br>• Agricola: Uva vinifera, Poroto granado, Durazno betarraga"
     },
     CLAP: {
         titulo: "XV Region de Arica y Parinacota",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Cactáceas andinas, Llareta, Tola.<br><br>• Fauna: Vicuña, Guanaco.<br><br>• Agricola: Maíz morado, Papa oca."
     },
     CLTA: {
         titulo: "I Region de Tarapacá",
-        descripcion: "•Flora: Tamarungo, algarrobo, tola, rica-rica  •Fauna: vicuña, alpaca, flamenco andino  •Agrícola: papas altiplánicas, quinua.",
-        imagen: "imagenes/papa_antiplanica.png"
+        descripcion: "• Flora: Tamarungo, Algarrobo, Tola, Rica-Rica.<br><br>  • Fauna: Vicuña, Alpaca, Flamenco andino.<br><br>  • Agrícola: Papas altiplánicas, Quinua.",
+
     },
     CLAN: {
         titulo: "II Region de Antofagasta",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Jarilla, Añañuca.<br><br>• Fauna: Guanaco, Flamenco chileno, Pez piedra, Caballa"
     },
     CLAT:{
         titulo: "III Region de Atacama",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Copiapoa, Pimiento del norte.<br><br> • Fauna: Gato andino, Pericote, Lenguado, Ostion del norte.<br><br> • Agricola: Uva pisquera, Olivares, Tunas."
     },
     CLCO: {
         titulo: "IV Region de Coquimbo",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Arrayan macho, Molle.<br><br>• Fauna: Zorro chilla, Cururo, Loco, Ostiones, Piure.<br><br>• Agricola: Papayo chileno, Granado, Hortaliza."
     },
     CLVS: {
         titulo: "V Region de Valparaiso",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Peumo, Boldo, Litre.<br><br>• Fauna: Degú, Picaflor chico, Pez sierra, Corvina, Jaiba mora.<br><br>• Agricola: Viñedos."
     },
     CLLI: {
         titulo: "VI Region Libertador General Bernardo O'Higgins",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Belloto del sur, Maitén.<br><br>• Fauna: Pudú, Huemul.<br><br>• Agricola: Trigo tradicional, Legumbres, Frutas de carozo."
     },
     CLML: {
         titulo: "VII Region del Maule",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Naranjillo, Hualo.<br><br>• Fauna: Rana chilena, Marsupial.<br><br>• Agricola: Maíz antiguo. Viña patrimoniales, Tomate limachino."
     },
     CLNB: {
         titulo: "XVI Region del Ñuble",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Roble, Avellano chileno.<br><br>• Fauna: Zorro de Darwin, Carpintero negro.<br><br>• Agricola: Castañas, Frambuesas, Trigo rojo."
     },
     CLAR: {
         titulo: "VIII Region de la Araucania",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Araucaria, Laurel, Coihue.<br><br>• Fauna: Puma, Peucodón, Monito del monte.<br><br>• Agricola: Piñones, Papas mapuche, Cereales antiguos."
     },
     CLBI: {
         titulo: "VIII Region del BIO BIO",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Tineo, Ulmo.<br><br>• Fauna: Ranita de Darwin, Condor, Reineta, Merluza, Almejas.<br><br>• Agricola: lupino, Cebada, Hortolizas tradicionales."
     },
     CLLR: {
         titulo: "XIV Region de los Rios",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Tepú. Mañío, Canelo.<br><br>• Fauna: Gato guiña, Cisne de cuello negro.<br><br>• Agricola: Grosellas, Zarzaparilla."
     },
     CLLL: {
         titulo: "X Region de los Lagos",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Arrayan, Tiaca, Luma.<br><br>• Fauna: Huillín, Cormorán, Salmon, Mejillon chileno, Luga.<br><br>• Agricola: Papa chilota, Frambuesa silvestre."
     },
     CLAI: {
-        titulo: "XI Region Aisén del General Carlos Ibáñez del Campo",
-        descripcion: "Informacion faltante"
+        titulo: "XI Region Aysén del General Carlos Ibáñez del Campo",
+        descripcion: "• Flora: Ñirre, Calafate, Chilco.<br><br>• Fauna: Huemul, Condor austral, Zorro colorado, Centolla, Erizo, Merluza austral.<br><br>• Agricola: Ruibarbo, Frutillas silvestres."
     },
     CLMA: {
         titulo: "XII Region Magallanes y Antártica Chilena",
-        descripcion: "Informacion faltante"
+        descripcion: "• Flora: Pastizales esteparios, Líquenes.<br><br>• Fauna: Pingüino rey, Delfin austral.<br><br>• Agricola: No hay, solo cultivos experimentales."
     }
 };
 
@@ -74,7 +74,8 @@ document.querySelectorAll('.container svg path').forEach(region => {
     const datos = datosRegiones[id];
     if (datos) {
         document.getElementById("titulo-region").textContent = datos.titulo;
-        document.getElementById("descripcion-region").textContent = datos.descripcion;
+        document.getElementById("descripcion-region").innerHTML = datos.descripcion;
+
         
         // Mostrar u ocultar la imagen según corresponda
         const imagenRegion = document.getElementById("imagen-region");
